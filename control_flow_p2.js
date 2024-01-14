@@ -28,7 +28,7 @@ const updatePlantArea = () => {
 };
 
 const growPlants = (weeks) => {
-  if (parseInt(weeks) > 0 || typeof weeks === "string") {
+  if (parseInt(weeks) > 0 && typeof weeks !== "string") {
     console.log("\n---        PLANT CALCULATOR       ---\n");
     console.log(
       `Your available growing area is ${growthArea} square meters.\n`
