@@ -19,19 +19,15 @@ Test your loop with higher numbers and reference an online prime number table to
 determine the accuracy of your code.
 Be careful! If you set n to a number too large, your loop could take a long time to process.*/
 
-let number = 4;
-
+let number = 3;
 let searching = true;
 
 do {
-  let isPrime = true;
   number++;
-  if (number % 2 === 0) {
-    isPrime = false;
-    // number++;
-  }
-  if (isPrime) {
+  if (number % 2 === 0 && number % 3 === 0) {
+    continue;
+  } else {
     console.log(number);
-    searching = false;
+    searching = !searching;
   }
 } while (searching);
