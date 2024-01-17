@@ -4,15 +4,16 @@ let string =
 let table = string.split("\n");
 let rows = table.map((row) => row.split(","));
 let sample = rows[1];
-// console.log("Sample: ", sample);
 
 const makeTable = (rows) => {
   let string = "";
-  rows.map((cell) => {
-    console.log("Cell: ", cell);
-    string += `| ${cell}      `;
+  rows.map((cells) => {
+    cells.map((cell) => {
+      string += `| ${cell}            `;
+    });
+    string += "|\n";
   });
   console.log(string, "|", "\n");
 };
 
-makeTable(sample);
+makeTable(rows);
