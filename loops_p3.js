@@ -3,7 +3,6 @@ let string =
 
 let table = string.split("\n");
 let rows = table.map((row) => row.split(","));
-let sample = rows[1];
 
 const makeTable = (rows) => {
   let string = "";
